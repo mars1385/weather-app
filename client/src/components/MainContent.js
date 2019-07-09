@@ -101,6 +101,13 @@ const MainContent = () => {
 						</Button>
 					</form>
 				</Grid>
+				{weather.length > 0 ? (
+					<Grid item xs={12} align='center'>
+						<p>
+							You search for : <strong>{weather[0].name}</strong>{' '}
+						</p>
+					</Grid>
+				) : null}
 			</Grid>
 			<Grid container className={classes.form} spacing={1}>
 				{weather.length > 0 ? (
